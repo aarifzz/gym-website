@@ -1,0 +1,508 @@
+  @font-face {
+    font-family: 'myfont';
+    src: url('fonts/HelveticaNeueBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'bigfont';
+    src: url('fonts/zuumebold.ttf') format('truetype');
+  }
+  
+  body{
+    background-color:black;
+    font-family: 'myfont';
+  
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.scroll{
+    height: 10px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    scale: 0 1;
+    background-color:aquamarine;
+    top: 0;
+    animation: scroller linear;
+    animation-timeline: scroll();
+
+}   
+
+@keyframes scroller{    
+    to{
+        scale: 1 1;
+    }
+}
+
+
+@keyframes rotate{
+    0% {
+        transform: translateX(0) translateY(0);
+      }
+      50% {
+        transform: translateX(100vw) translateY(-50vh);
+      }
+      100% {
+        transform: translateX(200vw) translateY(0);
+      }
+}
+.total{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color:rgb(4, 9, 14)  ; Set the background color of the div to black */
+    z-index: -1;
+
+    animation: slide linear;
+    animation-timeline: view();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html{
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+.center{
+
+    color:orange;
+    right: 420px;
+    font-family: "myfont";
+    font-size: 32px;
+    /* animation: fady 10s forwards; */
+    
+      
+}
+
+   @keyframes fady{
+    from{
+         opacity:0;
+
+    }
+    to{
+        opacity: 1px;
+
+    }
+   }
+   .heading{
+     animation: fade 1s ease-in 1s normal;
+     animation-iteration-count: 1;
+     font-family: "bigfont";
+     font-size: 4em;
+   }
+   @keyframes fade {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.topright{
+    display: ;
+    justify-content:last baseline;
+    color:white;
+
+
+}
+
+.topright a{
+    display: flex;
+    justify-content:end;
+    margin-bottom: 0.5rem;
+    font-family: 'myfont';
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: orange;
+}
+
+.topright a:hover{
+    color: white;
+    
+    /* display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform; */
+    
+}
+
+.topleft{
+    position: relative;
+    
+    width: 160px;
+}
+.mid{
+    position: relative;
+    color: white;
+    left: 95px;
+    top: 50px;
+    font-family: "myfont";
+    font-weight: 50;
+    font-size: 20px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+    
+}
+.logo{
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    bottom: 90px;
+    left: 600px;
+    animation: fady 5s forwards;
+}
+.gympic{
+     position: relative;
+     width: 700px;
+     left: 550px;
+     bottom: 280px;
+     border-radius: 30px solid black ;
+     box-shadow: 30px;
+     animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+button{
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    bottom: 390px;
+    left: 100px;
+    cursor: pointer;
+    
+}
+
+.yellow{
+    position: relative;
+height: 25px;
+bottom: 325px;    
+background-color: yellow;
+animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+    
+
+}
+#program{
+    position: relative;
+    color: white;
+    bottom: 300px;
+ 
+    
+}
+.pfont{
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+.yoga{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    left: 50px;
+    top: 50px;
+    font-family: "myfont";
+    animation: fade 2s both;
+    border-radius: 30px;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+  
+}
+.yoyo{
+    position: relative;
+    top:40px;
+    left:45px;
+    border-radius: 30px;
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+.cardio{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    left: 396px;
+    bottom: 320px;
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+   
+
+}
+.carcar{
+    position: relative;
+    bottom:330px;
+    border-radius: 30px;
+    left:390px;
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.strength{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    left: 706px;
+    border-radius: 30px;
+    bottom: 695px;
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.str{
+    position: relative;
+    bottom:700px;
+    left:700px;
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+
+}
+
+#support{
+    position: relative;
+    color: white;
+    bottom: 900px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+    
+
+}
+
+.sfont{
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+.butt2{
+    bottom: 150px;
+}
+.chris{
+    position: relative;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border-style: double;
+    border: 3px solid black;
+    left: 800px;
+    bottom: 120px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+.teacher{
+    position: relative;
+    width: 230px;
+    height: 230px;
+    border-radius: 45%;
+    border: 3px solid black;
+    left: 350px;
+    bottom: 120px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+#review{
+    position: relative;
+    color: white;
+    font-family: "myfont";
+    bottom: 900px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+.rev2{
+    display: flex;
+    justify-content: flex-end;
+
+
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.arnold{
+    position: relative;
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    bottom: 176px;
+    left: 420px;
+    border: 3px solid whitesmoke;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+
+}
+
+.rock{
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+     border-radius: 50%;
+     left: 860px;
+     bottom: 180px;
+     border: 3px solid whitesmoke;
+     animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+
+}
+
+.end{
+    color: whitesmoke;
+}
+
+#insta{
+    position: relative;
+    color: white;
+    bottom: 1000px;
+    font-family: "myfont";
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+
+}
+
+.hash{
+    position: relative;
+    color: yellow;
+    left: 1000px;
+    bottom: 100px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.gymin{
+    width: 200px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.yogaing{
+    position: relative;
+    width: 200px;
+    left: 100px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.cardio1{
+    position: relative;
+    width: 200px;
+    left: 200px;
+    height: 360px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.gymin1{
+    position: relative;
+    width: 200px;
+    left: 370px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.under{
+    position: relative;
+    color:grey;
+    top: 100px;
+    font-family: 'myfont';
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.contact{
+    position: relative;
+    color: grey ;
+    bottom: 10px;
+    left: 1000px;
+    top: 100px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+}
+
+.smedia{
+    position: relative;
+    width: 50px;
+    top: 100px;
+    padding: 20px;
+    left: 400px;
+    animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+    cursor: pointer;
+}
+.smedia:hover {
+    transform: translateX(20px);
+}
+
+
+#under{
+color: grey;
+animation: fade 2s both;
+    animation-timeline:view() ;
+    animation-range: entry 50% cover 50%;
+} 
+
+
+
+
